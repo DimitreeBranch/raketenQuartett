@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(26, 0, 43); /* space blue violet */
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    perspective: 1000px; /* This adds depth to the transformations */
+}
+
+.card {
+    height: 520px;
+    width: 325px;
+    background-color: rgb(255, 255, 240);
+    border-radius: 15px;
+    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the transform */
+    transform: rotateY(0deg) rotateX(0deg); /* Initial state */
+    transform-style: preserve-3d; /* Keeps the 3D effect during transformation */
+}
+
+.card:hover {
+    transform: rotateY(2deg) rotateX(1deg) scale(1.02); /* Adds a slight zoom to highlight the card */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Adds shadow for depth perception */
+}
+
+.card-content {
+    border: 3px solid #222;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.card-header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.categories{
+    text-align: center;
+    height: 32%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+.card-title {
+    text-align: center;
+    padding-top: 8px;
+    grid-column: span 3;
+    border: 1px solid #222;
+}
+
+.card-number {
+    text-align: center;
+    padding: 15px;
+    grid-column: span 1;
+    border: 1px solid #222;
+}
+.rocket-image {
+    grid-column: span 4;
+    max-width: 100%;
+    max-height: 220px;
+    border: 1px solid #222;
+}
+
+.rocket-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #222;
+}
+
+.rocket-info {
+    padding-top: 15px;
+    text-align: center;
+    grid-column: span 3;
+    border: 1px solid #222;
+}
+
+
+.goal-icon {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #222;
+}
+.goal-icon img {
+    object-fit: contain;
+    height: 50%;
+    width: 50%;
+}
+
+.stat-icon {
+    font-size: 10px;  
+}
+
+
+.year,
+.duration,
+.speed,
+.cost,
+.weight,
+.distance{
+    padding-top: 15px;
+    border: 1px solid #222;
+
+}
